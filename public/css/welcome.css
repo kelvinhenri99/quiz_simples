@@ -1,0 +1,111 @@
+.divWelcome {
+    width: 1310px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+    background-color: white;
+    box-shadow: 0px 0px 7px rgb(155, 155, 155);
+    border-radius: 7px;
+    margin-bottom: 30px;
+}
+
+.divTema, .divResultados {
+    width: 1310px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 0px 7px rgb(155, 155, 155);
+    border-radius: 7px;
+    margin-bottom: 30px;
+}
+
+.divWelcome h1, .divTema h1, .divResultados h1{
+    font-size: 37px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+}
+
+.divImageWelcome {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: -30px;
+    background-image: url("../images/welcome.jpg");
+    background-position: 50% 50%;
+    background-size: 100% 100%;
+    border-radius: 0px 0px 7px 7px;
+    border-top: 1px solid rgb(155, 155, 155);
+}
+
+.divImageWelcome p {
+    color: steelblue;
+    width: 400px;
+    background-color: white;
+    font-size: 25px;
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 100px;
+    padding: 50px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px rgb(155, 155, 155);
+}
+
+.divImageWelcome p span {
+    color: rgb(117, 117, 117);
+    font-size: 17px;
+}
+
+.divImageWelcome p span a {
+    text-decoration: none;
+    color: rgb(117, 117, 117);
+    font-weight: bolder;
+}
+
+.divGridNivel {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    margin: 0 auto;
+    grid-gap: 50px;
+    padding-bottom: 50px;
+}
+
+.divGridNivel a {
+    margin: 0 auto;
+    text-decoration: none;
+    border: 1px solid steelblue;
+    color: white;
+    font-size: 25px;
+    width: 90%;
+    transition: 0.4s;
+    background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+}
+
+.divGridNivel a:hover {
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px silver;
+
+}
+
+.divResultados div {
+
+}
+
+.divResultados div p {
+    font-size: 25px;
+    padding-bottom: 50px;
+}
+
+@media screen and (max-width: 1310px) {
+    .divWelcome, .divTema, .divResultados{
+        width: 95%;
+    }
+}

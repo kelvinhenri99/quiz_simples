@@ -1,0 +1,85 @@
+.divLoginOrRegister {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.divLoginOrRegister div {
+    width: 800px;
+    min-height: 300px;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 0px 0px 7px rgb(155, 155, 155);
+}
+
+.divLoginOrRegister div h1 {
+    margin: 0 auto;
+    font-size: 37px;
+    padding-top: 20px;
+    color: steelblue;
+    font-weight: normal;
+}
+
+.divLoginOrRegister div h1 span {
+    background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+    font-weight: bolder;
+    font-size: 35px;
+}
+
+.divLoginOrRegister div input {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid silver;
+    border-radius: 7px;
+    padding: 8px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.divLoginOrRegister div input:focus {
+    color: steelblue;
+}
+
+.divLoginOrRegister div button {
+    margin: 0 auto;
+    text-decoration: none;
+    border: 1px solid steelblue;
+    color: white;
+    font-size: 25px;
+    width: 200px;
+    transition: 0.4s;
+    background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+    margin-bottom: 60px;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+.divLoginOrRegister div button:hover {
+    border-radius: 0px;
+    box-shadow: 0px 0px 7px silver;
+
+}
+
+@media screen and (max-width: 1310px) {
+    .divLoginOrRegister{
+        grid-template-columns: 1fr;
+    }
+    .divLoginOrRegister div {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+}
