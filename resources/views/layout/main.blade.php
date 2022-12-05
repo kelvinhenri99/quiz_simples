@@ -17,13 +17,18 @@
     <div class="divMenu">
         <h1>Quiz Tech</h1>
         @auth
-            <a href="/meu-perfil/">Dashboard</a>
-            <a href="#">Sair</a>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <a href="{{ route('logout') }}" onclick="event.preventDefault();this.closest('form').submit();" class="divMenuBtn">Sair</a>
+            </form>
+            <a href="/meu-perfil/" class="divMenuBtn">Meu Perfil</a>
         @endauth
 
         @guest
-            <a href="/entrar-cadastrar">Faça Login ou Cadastre-se</a>
+            <a href="/entrar-cadastrar" class="divMenuBtn">Faça Login ou Cadastre-se</a>
         @endguest
+        
+            <a href="/" class="divMenuBtn">Início</a>
     </div>
     @yield('content')
 </body>

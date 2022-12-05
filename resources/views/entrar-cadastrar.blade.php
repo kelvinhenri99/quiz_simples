@@ -7,9 +7,9 @@
             </br>
                 <span>Cadastre-se agora!</span>
         </h1>
+
         <form method="POST" action="{{ route('register') }}">
             @csrf
-
             <x-jet-input id="name" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" placeholder="Insira seu Nome"/>
             <x-jet-input id="email" type="email" name="email" :value="old('email')" required placeholder="Insira um E-mail"/>
             <x-jet-input id="password" type="password" name="password" required autocomplete="new-password" placeholder="Insira uma senha"/>
@@ -24,6 +24,16 @@
             </br>
                 <span>Acesse agora!</span>
         </h1>
+
+        <form method="POST" action="{{ route('login') }}">
+            @csrf
+                <x-jet-input id="email" type="email" name="email" :value="old('email')" required autofocus placeholder="Insira o seu e-mail"/>
+                <x-jet-input id="password" type="password" name="password" required autocomplete="current-password" placeholder="Insira a senha"/>
+
+                <x-jet-button class="ml-4">
+                    {{ __('Entrar') }}
+                </x-jet-button>
+        </form>
     </div>
 </div>
 

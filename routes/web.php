@@ -16,7 +16,7 @@ use App\Http\Controllers\QuizController;
 */
 
 Route::get('/', [QuizController::class, 'welcome']);
-Route::get('/tema-facil', [QuizController::class, 'tema_facil']);
+Route::get('/tema-facil', [QuizController::class, 'tema_facil'])->middleware('auth');
 Route::get('/entrar-cadastrar', [QuizController::class, 'entrar_cadastrar']);
 
 Route::middleware([
