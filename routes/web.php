@@ -19,6 +19,9 @@ Route::get('/', [QuizController::class, 'welcome']);
 Route::get('/tema-facil', [QuizController::class, 'tema_facil'])->middleware('auth');
 Route::get('/entrar-cadastrar', [QuizController::class, 'entrar_cadastrar']);
 
+Route::post('/perguntaFacil', [QuizController::class, 'perguntaFacil']);
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

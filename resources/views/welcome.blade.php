@@ -19,9 +19,4 @@
         </div>
     </div>
 
-    <div class="divResultados">
-        <h1>Resultado dos participantes</h1>
-
-        <p>Ainda não temos dados suficientes, desculpe!</p>
-    </div>
 @endsection

@@ -82,4 +82,8 @@
         width: 100%;
         margin-bottom: 50px;
     }
+    .divLoginOrRegister div input {
+        padding: 8px 0px;
+        width: 95%;
+    }
 }

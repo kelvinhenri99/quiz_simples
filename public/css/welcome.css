@@ -9,7 +9,7 @@
     margin-bottom: 30px;
 }
 
-.divTema, .divResultados {
+.divTema {
     width: 1310px;
     margin: 0 auto;
     text-align: center;
@@ -19,7 +19,7 @@
     margin-bottom: 30px;
 }
 
-.divWelcome h1, .divTema h1, .divResultados h1{
+.divWelcome h1, .divTema h1{
     font-size: 37px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -95,17 +95,25 @@
 
 }
 
-.divResultados div {
-
-}
-
-.divResultados div p {
-    font-size: 25px;
-    padding-bottom: 50px;
-}
-
 @media screen and (max-width: 1310px) {
-    .divWelcome, .divTema, .divResultados{
+    .divWelcome, .divTema{
         width: 95%;
+    }
+    .divImageWelcome {
+        background-image: none;
+    }
+    .divImageWelcome p {
+        width: 100%;
+        background-color: white;
+        font-size: 25px;
+        position: static;
+        margin-left: 0px;
+        margin-top: 50px;
+        padding: 0px;
+        border-radius: 7px;
+        box-shadow: none;
+    }
+    .divGridNivel {
+        grid-gap: 0px;
     }
 }
