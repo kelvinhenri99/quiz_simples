@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('questions', function (Blueprint $table) {
-            $table->increments('id')->primary();
+            $table->increments('id');
             $table->string('level')->nullable();
             $table->string('title')->nullable();
             $table->timestamps();
