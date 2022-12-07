@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Question;
+use App\Models\Answer;
 use Illuminate\Support\Facades\Auth;
 
 class QuizController extends Controller
@@ -34,19 +35,13 @@ class QuizController extends Controller
 
         $id = Auth::user()->id;
 
-        $resposta = new Respostas;
-        
-        $resposta->id                   = $id;
-        $resposta->id_usuario           = $id;
-        $resposta->autorizacao          = $request->autorizacao;
-        $resposta->nivel                = 'FACIL';
-        $resposta->pergunta1            = $request->pergunta1;
-        $resposta->pergunta2            = $request->pergunta2;
-        $resposta->pergunta3            = $request->pergunta3;
-        $resposta->pergunta4            = $request->pergunta4;
-        $resposta->pergunta5            = $request->pergunta5;
+        $answers = new Answer;
 
-        $resposta->save();
+        $answers->choice                = $request->choice;
+        $answers->users_id              = $id;
+        $answers->question_id           = $request->question_id;
+
+        $answers->save();
 
         return back()->withInput();
     }
