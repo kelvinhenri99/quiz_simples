@@ -13,7 +13,7 @@
             <h1>Insira seu nome</h1>
             <input type="text" value="{{Auth::user()->name}}" />
                 </br>
-            <h2>Você autoriza a aparecer seus resultados na página principal?
+            <h2>Você autoriza divulgação seus resultados na página principal?
                 </br>
                 <span>
                     <input type="radio" name="autorizacao" checked value="NAO">Não
@@ -24,7 +24,7 @@
 
             <div>
                 <h1>1° Pergunta</h1>
-                <h2>Qual o sinômimo de ONLINE?</h2>
+                <h2>Qual o sinônimo de ONLINE?</h2>
                 <label id="p1r1"><input type="radio" name="pergunta1" value="resposta1">Distante.</label>
                 <label id="p1r2"><input type="radio" name="pergunta1" value="resposta2">Acessível.</label>
                 <label id="p1r3"><input type="radio" name="pergunta1" value="resposta3">Desconectado.</label>
@@ -33,7 +33,7 @@
 
             <div>
                 <h1>2° Pergunta</h1>
-                <h2>Por que devemos evitar o acesso a wifi público?</h2>
+                <h2>Por que devemos evitar o acesso a Wi-Fi público?</h2>
                 <label id="p2r1"><input type="radio" name="pergunta2" value="resposta1">Pois a conexão é ruim.</label>
                 <label id="p2r2"><input type="radio" name="pergunta2" value="resposta2">Não conhecer a senha.</label>
                 <label id="p2r3"><input type="radio" name="pergunta2" value="resposta3">Celular pode quebrar.</label>
@@ -42,7 +42,7 @@
 
             <div>
                 <h1>3° Pergunta</h1>
-                <h2>Com o avanço da tecnologia em geral, cada vez as coisas então sendo menores e com muito mais funções, como por exemplo um telefone fixo comparado a um celular. Por que isso ocorre?</h2>
+                <h2>Com o avanço da tecnologia em geral, as coisas tornam-se menores e com muito mais funções, como por exemplo um telefone fixo comparado a um celular. Por que isso ocorre?</h2>
                 <label id="p3r1"><input type="radio" name="pergunta3" value="resposta1">A tecnologia quer acabar com coisas grandes.</label>
                 <label id="p3r2"><input type="radio" name="pergunta3" value="resposta2">A tecnologia vem para inovar as coisas existentes e otimizar tempo.</label>
                 <label id="p3r3"><input type="radio" name="pergunta3" value="resposta3">A tecnologia irá sempre diminuir o tamanho dos objetos já criados.</label>
@@ -51,7 +51,7 @@
 
             <div>
                 <h1>4° Pergunta</h1>
-                <h2>Nesse século XXI, a demanda das empresas por profissionais de tecnologia aumentaram muito. Quais são os principais cargos de tecnologia atualmente(2022)?</h2>
+                <h2>No século XXI, a demanda das buscas de empresas por profissionais da tecnologia aumentaram muito. Quais são os principais cargos de tecnologia atualmente (2022)?</h2>
                 <label id="p4r1"><input type="radio" name="pergunta4" value="resposta1">Desenvolvedor, Encarregado, Analista de dados.</label>
                 <label id="p4r2"><input type="radio" name="pergunta4" value="resposta2">Desenvolvedor, Analista de big data, Especialista em segurança da informação.</label>
                 <label id="p4r3"><input type="radio" name="pergunta4" value="resposta3">Desenvolvedor, estagiário, Segurança.</label>
@@ -72,16 +72,16 @@
     @else
         <div>
             <h1>Parabéns {{Auth::user()->name}}! Você concluíu o tema <span>FACIL</span>.</h1>
-            <h1>Total de pontos:
+            <h1>Pontuação:
                 <span>
-                    em desenvolvimeto...
+                    em desenvolvimento...
                 </span>
             </h1>
         </div>
 
             <div>
                 <h1>1° Pergunta</h1>
-                <h2>Qual o sinômimo de ONLINE?</h2>
+                <h2>Qual o sinônimo de ONLINE?</h2>
                 @if ($facil->pergunta1 === 'resposta1')
                     <label class="nao">Distante.</label>
                 @else
@@ -106,7 +106,7 @@
 
             <div>
                 <h1>2° Pergunta</h1>
-                <h2>Por que devemos evitar o acesso a wifi público?</h2>
+                <h2>Por que devemos evitar o acesso a Wi-FI público?</h2>
                 @if ($facil->pergunta2 === 'resposta1')
                     <label class="nao">Pois a conexão é ruim.</label>
                 @else
@@ -131,7 +131,7 @@
 
             <div>
                 <h1>3° Pergunta</h1>
-                <h2>Com o avanço da tecnologia em geral, cada vez as coisas então sendo menores e com muito mais funções, como por exemplo um telefone fixo comparado a um celular. Por que isso ocorre?</h2>
+                <h2>Com o avanço da tecnologia em geral, as coisas tornam-se menores e com muito mais funções, como por exemplo um telefone fixo comparado a um celular. Por que isso ocorre?</h2>
                 @if ($facil->pergunta3 === 'resposta1')
                     <label class="nao">A tecnologia quer acabar com coisas grandes.</label>
                 @else
@@ -156,7 +156,7 @@
 
             <div>
                 <h1>4° Pergunta</h1>
-                <h2>Nesse século XXI, a demanda das empresas por profissionais de tecnologia aumentaram muito. Quais são os principais cargos de tecnologia atualmente(2022)?</h2>
+                <h2>No século XXI, a demanda das buscas de empresas por profissionais da tecnologia aumentaram muito. Quais são os principais cargos de tecnologia atualmente (2022)?</h2>
                 @if ($facil->pergunta4 === 'resposta1')
                     <label class="nao">Desenvolvedor, Encarregado, Analista de dados.</label>
                 @else
