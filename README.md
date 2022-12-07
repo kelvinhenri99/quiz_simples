@@ -3,6 +3,6 @@
 <h1 align="center">Quiz Tech</span></h1>
 <p align="center">Um projeto de perguntas e respostas com níveis <b>(FACIL, MÉDIO E DIFICIL)</b> sobre o tema tecnologia espelhado no Google Formulário.</p>
 
-<img src="/public/images/captura1.jpg" style="height: 500px; width:100%;"/>
-<img src="/public/images/captura2.jpg" style="height: 500px; width:100%;"/>
-<img src="/public/images/captura3.jpg" style="height: 500px; width:100%;"/>
+<img src="/public/images/captura1.jpg" style="height: 410px; width:90%;"/>
+<img src="/public/images/captura2.jpg" style="height: 410px; width:90%;"/>
+<img src="/public/images/captura3.jpg" style="height: 410px; width:90%;"/>
