@@ -22,17 +22,20 @@
 }
 
 .divPerguntas div {
-    width: 800px;
-    min-height: 300px;
+    width: 900px;
     margin: 0 auto;
     background-color: white;
     border-radius: 7px;
     box-shadow: 0px 0px 7px rgb(155, 155, 155);
+    padding-bottom: 50px;
 }
 
 .divPerguntas div h2 {
-    font-size: 18px;
-    margin-top: 50px;
+    max-width: 90%;
+    margin: 0 auto;
+    font-size: 20px;
+    margin-top: 0px;
+    font-weight: normal;
 }
 
 .divPerguntas div h2 span {
@@ -41,6 +44,44 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: black;
+    font-size: 18px;
+}
+
+.divPerguntas div label {
+    border-radius: 7px;
+    border: 2px solid steelblue;
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    text-indent: 50px;
+    margin-top: 10px;
+    color: rgb(40,40,40);
+    font-size: 20px;
+    font-family: arial;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.divPerguntas div h1 span {
+    background-image: linear-gradient(to left, black, black);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+}
+
+.divPerguntas input[type="text"] {
+    border-radius: 7px;
+    border: 2px solid steelblue;
+    width: 70%;
+    margin: 0 auto;
+    color: rgb(40,40,40);
+    font-size: 20px;
+    font-family: arial;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .divPerguntas input[type="submit"] {
@@ -66,3 +107,33 @@
     border-bottom: 2px solid steelblue;
     color: yellow;
 }
+
+.nao {
+    background-color: red;
+    color: white!important;
+    text-shadow: 0px 0px 1px black,
+                 0px 0px 2px black,
+                 0px 0px 10px black;
+}
+
+.sim {
+    background-color: rgb(96, 147, 46);
+    color: white!important;
+    text-shadow: 0px 0px 1px black,
+                0px 0px 2px black,
+                0px 0px 10px black;
+}
+
+@media screen and (max-width: 1310px) {
+    .divPerguntas div {
+        width: 100%;
+    }
+    .divPerguntas div label {
+        justify-content: center;
+        text-indent: 0px;
+        width: 85%;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+}
+
