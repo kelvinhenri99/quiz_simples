@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Question;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
-use App\Models\Respostas;
 
 class QuizController extends Controller
 {
@@ -16,12 +15,14 @@ class QuizController extends Controller
 
     public function tema_facil () {
 
-        $id = Auth::user()->id;
+        $on = 1;
+        $two = 2;
+        $tree = 3;
+        $for = 4;
 
-        $facil = DB::select('select *, date_format(created_at, "%d/%m/%Y") as data from respostas where id = ?', [$id]);
-        $pontos = DB::select('select count(*) as total from quiz_simples.respostas where pergunta1="resposta2" union all select count(*) as total from quiz_simples.respostas where pergunta2="resposta4" union all select count(*) as total from quiz_simples.respostas where pergunta3="resposta2" union all select count(*) as total from quiz_simples.respostas where pergunta4="resposta2" union all select count(*) as total from quiz_simples.respostas where pergunta5="resposta2"');
+        $all = (new Question)->questionsEazy();
 
-        return view('tema-facil', compact('facil','id','pontos'));
+        return view('tema-facil', compact('all','on','two','tree','for'));
     }
 
     public function entrar_cadastrar () {

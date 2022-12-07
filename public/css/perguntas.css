@@ -38,15 +38,6 @@
     font-weight: normal;
 }
 
-.divPerguntas div h2 span {
-    background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: black;
-    font-size: 18px;
-}
-
 .divPerguntas div label {
     border-radius: 7px;
     border: 2px solid steelblue;
