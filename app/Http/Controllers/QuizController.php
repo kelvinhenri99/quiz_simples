@@ -23,7 +23,11 @@ class QuizController extends Controller
 
         $all = (new Question)->questionsEazy();
 
-        return view('tema-facil', compact('all','on','two','tree','for'));
+        $answers = (new Question)->answer();
+
+        $teste = (new Question)->autenticator();
+
+        return view('tema-facil', compact('all','answers','on','two','tree','for','teste'));
     }
 
     public function entrar_cadastrar () {
@@ -43,6 +47,6 @@ class QuizController extends Controller
 
         $answers->save();
 
-        return back()->withInput();
+        return back()->withInput()->with('success', 'Resposta salva com sucesso!');
     }
 }

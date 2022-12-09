@@ -1,3 +1,18 @@
+.alerta {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: green;
+    padding: 30px;
+    font-weight: bolder;
+    color: white;
+    z-index: 100000;
+    box-shadow: 0px 0px 15px black;
+    text-align: center;
+    font-size: 25px;
+}
+
 .divPerguntas {
     width: 100%;
     margin: 0 auto;
