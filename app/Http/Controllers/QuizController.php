@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Question;
+use App\Models\Answer;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
-use App\Models\Respostas;
 
 class QuizController extends Controller
 {
@@ -16,12 +16,18 @@ class QuizController extends Controller
 
     public function tema_facil () {
 
-        $id = Auth::user()->id;
+        $on = 1;
+        $two = 2;
+        $tree = 3;
+        $for = 4;
 
-        $facil = DB::select('select *, date_format(created_at, "%d/%m/%Y") as data from respostas where id = ?', [$id]);
-        $pontos = DB::select('select count(*) as total from quiz_simples.respostas where pergunta1="resposta2" union all select count(*) as total from quiz_simples.respostas where pergunta2="resposta4" union all select count(*) as total from quiz_simples.respostas where pergunta3="resposta2" union all select count(*) as total from quiz_simples.respostas where pergunta4="resposta2" union all select count(*) as total from quiz_simples.respostas where pergunta5="resposta2"');
+        $all = (new Question)->questionsEazy();
 
-        return view('tema-facil', compact('facil','id','pontos'));
+        $answers = (new Question)->answer();
+
+        $teste = (new Question)->autenticator();
+
+        return view('tema-facil', compact('all','answers','on','two','tree','for','teste'));
     }
 
     public function entrar_cadastrar () {
@@ -33,20 +39,14 @@ class QuizController extends Controller
 
         $id = Auth::user()->id;
 
-        $resposta = new Respostas;
-        
-        $resposta->id                   = $id;
-        $resposta->id_usuario           = $id;
-        $resposta->autorizacao          = $request->autorizacao;
-        $resposta->nivel                = 'FACIL';
-        $resposta->pergunta1            = $request->pergunta1;
-        $resposta->pergunta2            = $request->pergunta2;
-        $resposta->pergunta3            = $request->pergunta3;
-        $resposta->pergunta4            = $request->pergunta4;
-        $resposta->pergunta5            = $request->pergunta5;
+        $answers = new Answer;
 
-        $resposta->save();
+        $answers->choice                = $request->choice;
+        $answers->users_id              = $id;
+        $answers->question_id           = $request->question_id;
 
-        return back()->withInput();
+        $answers->save();
+
+        return back()->withInput()->with('success', 'Resposta salva com sucesso!');
     }
 }

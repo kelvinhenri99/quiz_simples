@@ -1,3 +1,18 @@
+.alerta {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: green;
+    padding: 30px;
+    font-weight: bolder;
+    color: white;
+    z-index: 100000;
+    box-shadow: 0px 0px 15px black;
+    text-align: center;
+    font-size: 25px;
+}
+
 .divPerguntas {
     width: 100%;
     margin: 0 auto;
@@ -10,7 +25,20 @@
     color: rgb(40,40,40);
     font-size: 25px;
     font-weight: bolder;
-}
+    cursor: pointer;
+} 
+
+.divPerguntas button {
+    text-decoration: none;
+    background-color: transparent;
+    border: 0px;
+    color: rgb(40,40,40);
+    font-size: 25px;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 20px;
+} 
 
 .divPerguntas h1 {
     background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
@@ -36,15 +64,6 @@
     font-size: 20px;
     margin-top: 0px;
     font-weight: normal;
-}
-
-.divPerguntas div h2 span {
-    background-image: linear-gradient(to bottom, rebeccapurple, steelblue, turquoise);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: black;
-    font-size: 18px;
 }
 
 .divPerguntas div label {
@@ -85,27 +104,20 @@
 }
 
 .divPerguntas input[type="submit"] {
-    border-top: 2px solid steelblue;
-    border-left: 2px solid turquoise;
-    border-right: 2px solid rebeccapurple;
-    border-bottom: 2px solid white;
-    font-size: 25px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-    width: 300px;
-    background-image: linear-gradient(to bottom left, rebeccapurple, steelblue, turquoise);
+    border: 0px;
+    background-color: steelblue;
     color: white;
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    width: 300px;
     transition: 0.4s;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .divPerguntas input[type="submit"]:hover {
-    border-top: 2px solid white;
-    border-left: 2px solid rebeccapurple;
-    border-right: 2px solid turquoise;
-    border-bottom: 2px solid steelblue;
-    color: yellow;
+    box-shadow: 0px 0px 20px silver;
 }
 
 .nao {

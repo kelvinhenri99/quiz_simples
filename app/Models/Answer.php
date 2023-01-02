@@ -5,8 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Respostas extends Model
+class Answer extends Model
 {
-    use HasFactory;
-
+    protected $fillable = [
+        'choice',
+        'users_id',
+        'question_id',
+    ];
 }
