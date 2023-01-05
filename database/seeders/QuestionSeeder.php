@@ -17,27 +17,27 @@ class QuestionSeeder extends Seeder
     {
         DB::table('questions')->insert([
             'id' => '1',
-            'level' => 'facil',
+            'level' => '1',
             'title' => 'Qual o sinônimo de ONLINE?',
         ]);
         DB::table('questions')->insert([
             'id' => '2',
-            'level' => 'facil',
+            'level' => '1',
             'title' => 'Por que devemos evitar o acesso a Wi-Fi público?',
         ]);
         DB::table('questions')->insert([
             'id' => '3',
-            'level' => 'facil',
+            'level' => '1',
             'title' => 'Com o avanço da tecnologia em geral, as coisas tornam-se menores e com muito mais funções, como por exemplo um telefone fixo comparado a um celular. Por que isso ocorre?',
         ]);
         DB::table('questions')->insert([
             'id' => '4',
-            'level' => 'facil',
+            'level' => '1',
             'title' => 'No século XXI, a demanda das buscas de empresas por profissionais da tecnologia aumentaram muito. Quais são os principais cargos de tecnologia atualmente (2022)?',
         ]);
         DB::table('questions')->insert([
             'id' => '5',
-            'level' => 'facil',
+            'level' => '1',
             'title' => 'Qual a frase que melhor define a tecnologia?',
         ]);
     }

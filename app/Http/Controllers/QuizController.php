@@ -21,13 +21,13 @@ class QuizController extends Controller
         $tree = 3;
         $for = 4;
 
-        $all = (new Question)->questionsEazy();
+        $all = (new Question)->questionsEasy();
 
         $answers = (new Question)->answer();
 
-        $teste = (new Question)->autenticator();
+        $auth = (new Question)->autenticatorEasy();
 
-        return view('tema-facil', compact('all','answers','on','two','tree','for','teste'));
+        return view('tema-facil', compact('all','answers','on','two','tree','for','auth'));
     }
 
     public function entrar_cadastrar () {
@@ -41,9 +41,13 @@ class QuizController extends Controller
 
         $answers = new Answer;
 
-        $answers->choice                = $request->choice;
-        $answers->users_id              = $id;
-        $answers->question_id           = $request->question_id;
+        $answers->choice1       = $request->choice1;
+        $answers->choice2       = $request->choice2;
+        $answers->choice3       = $request->choice3;
+        $answers->choice4       = $request->choice4;
+        $answers->choice5       = $request->choice5;
+        $answers->users_id      = $id;
+        $answers->level         = '1';
 
         $answers->save();
 

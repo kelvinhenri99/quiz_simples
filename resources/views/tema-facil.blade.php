@@ -16,26 +16,25 @@
     <a href="/">Voltar página</a>
     <div>
         <h1>Perguntas com o tema tecnologia nível Fácil</h1>
-        <h2>{{ Auth::user()->name }}, Estamos aguardando o seu resultado!</h2>
+        <h2>{{ Auth::user()->name }}, seja seus resultados <a href="">aqui!</a></h2>
     </div>
 
-    @foreach ($all as $all)
-        <form action="/perguntaFacil" method="POST">
-            @csrf
-            <div>
-                <h1>{{ $all->id }}° Pergunta</h1>
-                <h2> {{ $all->title }} </h2>
-                <input type="hidden" name="question_id" value="{{ $all->id }}">
-                <label id="p{{$all->id}}r{{$on}}"><input type="radio" name="choice" value="{{ $all->option1 }}">{{ $all->option1 }}</input></label>
-                <label id="p{{$all->id}}r{{$two}}"><input type="radio" name="choice" value="{{ $all->option2 }}">{{ $all->option2 }}</input></label>
-                <label id="p{{$all->id}}r{{$tree}}"><input type="radio" name="choice" value="{{ $all->option3 }}">{{ $all->option3 }}</input></label>
-                <label id="p{{$all->id}}r{{$for}}"><input type="radio" name="choice" value="{{ $all->option4 }}">{{ $all->option4 }}</input></label>
-                
-                <input type="submit" value="Confirmar {{ $all->id }}° Pergunta">
-                
-            </div>
-        </form>
-    @endforeach     
+    <form action="/perguntaFacil" method="POST">
+        @foreach ($all as $all)
+                @csrf
+                <div>
+                    <h1>{{ $all->id }}° Pergunta</h1>
+                    <h2> {{ $all->title }} </h2>
+                    <label id="p{{$all->id}}r{{$on}}"><input type="radio" name="choice{{$all->id}}" value="{{ $all->option1 }}">{{ $all->option1 }}</input></label>
+                    <label id="p{{$all->id}}r{{$two}}"><input type="radio" name="choice{{$all->id}}" value="{{ $all->option2 }}">{{ $all->option2 }}</input></label>
+                    <label id="p{{$all->id}}r{{$tree}}"><input type="radio" name="choice{{$all->id}}" value="{{ $all->option3 }}">{{ $all->option3 }}</input></label>
+                    <label id="p{{$all->id}}r{{$for}}"><input type="radio" name="choice{{$all->id}}" value="{{ $all->option4 }}">{{ $all->option4 }}</input></label>
+                </div>
+        @endforeach
+
+        <input type="submit" value="Enviar Formulário">
+
+    </form>
 
     <button id="back-to-top">Ir ao topo</button>
 

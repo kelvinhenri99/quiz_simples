@@ -15,7 +15,12 @@ return new class extends Migration
     {
         Schema::create('answers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('choice')->nullable();
+            $table->string('choice1')->nullable();
+            $table->string('choice2')->nullable();
+            $table->string('choice3')->nullable();
+            $table->string('choice4')->nullable();
+            $table->string('choice5')->nullable();
+            $table->string('level')->nullable();
             $table->string('users_id')->nullable();
             $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('question_id')->unsigned()->nullable();

@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Question extends Model
 {
-    public function questionsEazy(){
+    public function questionsEasy(){
 
-        return $this->where('level', 'facil')
+        return $this->where('level', '1')
                     ->join('question_options', 'question_id', '=', 'questions.id')
                     ->select('questions.title','question_options.*')
                     ->get();
@@ -27,15 +27,17 @@ class Question extends Model
         ->join('users', 'users.id', '=', 'answers.users_id')
         ->select('questions.title','question_options.*','answers.*','questions.id as kelvin')
         ->get();
+
     }
 
-    public function autenticator(){
+    public function autenticatorEasy(){
 
         $id = Auth::user()->id;
 
-        return $this->where('users_id', $id)
+        return $this
+        ->where('answers.users_id', $id)
+        ->where('answers.level', '1')
         ->from('answers')
-        ->join('question_options', 'answers.question_id', '=', 'question_options.question_id')
         ->get();
     }
 }
